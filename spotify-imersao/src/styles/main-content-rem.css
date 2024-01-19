@@ -1,0 +1,179 @@
+/* HEADER */
+.main-container {
+    max-width: 80rem;
+    height: 100rem;
+    margin-left: 20rem; /* 320px para rem */
+    margin-right: 3.5rem; /* 56px para rem */
+  }
+  
+  .header__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem; /* 10px para rem */
+    margin: 1.25rem; /* 20px para rem */
+    border-radius: 0.5rem; /* 8px para rem */
+    background-color: #121212;
+  }
+  
+  .header__navigation .navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .header__navigation .navigation .arrow-left {
+    margin-right: 0.9375rem; /* 15px para rem */
+  }
+  
+  .arrow-left,
+  .arrow-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: var(--bg-icon);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .header__login {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header__search {
+    display: flex;
+    align-items: center;
+    width: 22.75rem; /* 364px para rem */
+    height: 3rem; /* 48px para rem */
+    margin-left: 0.5rem; /* 8px para rem */
+    border: transparent;
+    background-color: #242424;
+    border-radius: 31.25rem; /* 500px para rem */
+    border: 0.0625rem solid transparent; /* 1px para rem */
+  }
+  
+  .header__search img {
+    width: 1rem; /* 16px para rem */
+    height: 1rem; /* 16px para rem */
+    margin-left: 1.25rem; /* 10px para rem */
+  }
+  
+  .header__search input {
+    background: transparent;
+    border: none;
+    padding: 0 6.25rem 0 0.75rem;
+    color: #fff;
+    text-overflow: ellipsis;
+    outline: none;
+  }
+  
+  .header__login .subscribe {
+    color: var(--text-sub);
+    font-size: 1rem; /* 16px para rem */
+    font-weight: 700;
+    background-color: transparent;
+    margin-right: 2rem; /* 32px para rem */
+  }
+  
+  .header__login .login {
+    width: 6.25rem; /* 100px para rem */
+    height: 3rem; /* 48px para rem */
+    color: var(--text-base-dark);
+    font-size: 1rem; /* 16px para rem */
+    font-weight: 700;
+    border-radius: 2.5rem; /* 40px para rem */
+  }
+  
+  /* HOVER */
+  
+  .header__search:hover {
+    border: 0.0625rem solid #fff; /* 1px para rem */
+  }
+  
+  .header__login .subscribe:hover,
+  .header__login .login:hover {
+    transform: scale(1.04);
+  }
+  /* FIM HOVER */
+  
+  /* FIM HEADER */
+  
+  /* PLAYLIST */
+  .playlist-container {
+    height: 72vh;
+    padding-top: 1rem;
+    margin: 1.25rem; /* 20px para rem */
+    border-radius: 0.625rem; /* 10px para rem */
+    background-color: #121212;
+  }
+  
+  .playlist {
+    margin: 3rem; /* 24px para rem */
+  }
+  
+  .playlist #greeting {
+    color: var(--text-base-light);
+    font-size: 2rem; /* 32px para rem */
+    font-weight: 700;
+    margin-bottom: 3rem; /* 48px para rem */
+  }
+  
+  .playlist .session {
+    color: var(--text-base-light);
+    font-size: 1.5rem; /* 24px para rem */
+    font-weight: 700;
+  }
+  
+  /* SCROLL */
+  .offer__scroll-container {
+    max-height: 52vh;
+    margin: 3rem; /* 24px para rem */
+    overflow-y: auto;
+  }
+  
+  .offer__scroll-container::-webkit-scrollbar {
+    width: 0.0625rem; /* 1px para rem */
+  }
+  
+  /* Thumb */
+  .offer__scroll-container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  /* FIM SCROLL */
+  
+  .offer__list-item {
+    display: grid; /* define o modelo de layout do elemento como uma grade */
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;  /* número de colunas na grade e a largura de cada coluna */
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cards {
+    position: relative;
+    width: 13.75rem; /* 220px para rem */
+    height: 12.5rem; /* 200px para rem */
+    overflow: hidden;
+    border-radius: 0.5rem; /* 8px para rem */
+  }
+  
+  .cards span {
+    padding: 1rem; /* 16px para rem */
+    position: absolute;
+    color: var(--text-base-light);
+    font-size: 1.5rem; /* 24px para rem */
+    font-weight: 700;
+  }
+  
+  /* COLOR CARDS */
+  .card1 {
+    background-color: rgb(0, 100, 80);
+  }
+  
+  /* Restante do seu código permanece igual */
+  

@@ -1,0 +1,384 @@
+/* HEADER */
+.main-container {
+  max-width: 80vw;
+  height: 100vh;
+  margin-left: 320px;
+  margin-right: 56px;
+}
+
+/* DISPLAY * TOTAL e vamos passar rapidamente por cada um deles
+block: Um elemento com display: block sempre inicia em uma nova linha e ocupa toda a largura disponível.
+Ele empilha verticalmente um sobre o outro.
+
+inline: Um elemento com display: inline não inicia em uma nova linha e apenas ocupa o espaço necessário para o conteúdo.
+Elementos inline não aceitam largura (width) e altura (height).
+
+inline-block: Um elemento com display: inline-block combina características de elementos inline e block.
+Ele não inicia uma nova linha e permite a definição de largura e altura.
+
+flex: A propriedade display: flex é usada para criar um contêiner flexível.
+Os itens dentro do contêiner flexível podem ser ajustados em termos de tamanho, ordem e alinhamento.
+
+grid: A propriedade display: grid é usada para criar um contêiner de layout em grade.
+Permite definir um layout bidimensional com linhas e colunas, facilitando o posicionamento de elementos.
+
+inline-flex:Similar ao flex, mas o contêiner flexível é tratado como um elemento inline.
+
+table, table-row, table-cell: Esses valores de display são usados para criar layouts semelhantes a tabelas.
+
+none: Um elemento com display: none é completamente removido do fluxo de layout e não é renderizado na tela.
+*/
+.header__navigation {
+  display: flex;
+  /* ESSES detalhes que tem dentro do display flex, mostra no navegador como fica */
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: #121212;
+  /* padding: 12px; */
+}
+
+.header__navigation .navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header__navigation .navigation .arrow-left {
+  margin-right: 1.25rem;
+}
+
+.arrow-left,
+.arrow-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--bg-icon);
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.header__login {
+  display: flex;
+  align-items: center;
+}
+
+.header__search {
+  display: flex;
+  align-items: center;
+  width: 364px;
+  height: 48px;
+  margin-left: 8px;
+  background-color: #242424;
+  border-radius: 500px;
+  border: 1px solid transparent;
+}
+
+.header__search img {
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+}
+
+.header__search input {
+  background: transparent;
+  border: none;
+  padding: 0px 100px 0 12px;
+  color: #fff;
+  text-overflow: ellipsis;
+  outline: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.header__login .subscribe {
+  color: var(--text-sub);
+  font-size: 16px;
+  font-weight: 700;
+  background-color: transparent;
+  margin-right: 32px;
+}
+
+.header__login .login {
+  width: 100px;
+  height: 48px;
+  color: var(--text-base-dark);
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 40px;
+}
+
+/* HOVER */
+
+.header__search:hover {
+  border: 1px solid #fff;
+}
+
+.header__login .subscribe:hover {
+  transform: scale(1.04);
+  color: var(--text-base-light);
+}
+
+.header__login .login:hover {
+  transform: scale(1.04);
+}
+/* FIM HOVER */
+
+/*FIM HEADER */
+
+/* PLAYLIST */
+.playlist-container {
+  height: 68vh;
+  padding-top: 16px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #121212;
+}
+
+.playlist {
+  margin: 24px;
+}
+
+.playlist #greeting {
+  color: var(--text-base-light);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 48px;
+}
+
+.playlist .session {
+  color: var(--text-base-light);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* SCROLL */
+.offer__scroll-container {
+  max-height: 43vh;
+  margin: 24px;
+  overflow-y: auto;
+}
+
+.offer__scroll-container::-webkit-scrollbar {
+  width: 1px;
+}
+
+.offer__scroll-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+/* FIM SCROLL */
+
+.offer__list-item {
+  /* display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  gap: 16px;
+  margin-bottom: 16px; */
+
+  /* CODIGO COM JS CALCULANDO OS CARDS POR COLUNA */
+  display: grid;  /* define o modelo de layout do elemento como uma grade */
+  gap: 16px;
+  grid-gap: 32px;  /* não é usado mais */
+  margin: 0 auto;
+}
+
+/* POSITION */
+/* principais são static, relative, absolute, fixed, e sticky. */
+
+.cards {
+  position: relative; /* relative:
+                          Comportamento em relação a si mesmo: O elemento é posicionado em relação à sua posição original.
+                          Mantém espaço original: O espaço original que o elemento ocuparia não é alterado, mas você pode movê-lo com top, right, bottom ou left. */
+  width: 220px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.cards span {
+  padding: 16px;
+  position: absolute;
+  /* absolute:
+                          Comportamento em relação ao ancestral posicionado mais próximo ou ao elemento raiz (se nenhum ancestral estiver posicionado).
+                          Remove do fluxo normal: O elemento é removido do fluxo normal do documento, o que significa que outros elementos agem como se o elemento não estivesse presente. */
+  color: var(--text-base-light);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* COLOR CARDS */
+.card1 {
+  background-color: rgb(0, 100, 80);
+}
+.card2 {
+  background-color: rgb(132, 0, 231);
+}
+.card3 {
+  background: rgb(30, 50, 100);
+}
+.card4 {
+  background: rgb(140, 25, 50);
+}
+.card5 {
+  background: rgb(232, 17, 91);
+}
+.card6 {
+  background: rgb(83, 122, 161);
+}
+.card7 {
+  background: rgb(142, 102, 172);
+}
+.card8 {
+  background: rgb(20, 138, 8);
+}
+.card9 {
+  background: rgb(30, 50, 100);
+}
+.card10 {
+  background: rgb(233, 20, 41);
+}
+.card11 {
+  background: rgb(80, 55, 80);
+}
+.card12 {
+  background: rgb(216, 64, 0);
+}
+.card13 {
+  background: rgb(186, 93, 7);
+}
+.card14 {
+  background: rgb(0, 30, 80);
+}
+.card15 {
+  background: rgb(60, 30, 80);
+}
+/* FIM COLOR CARDS */
+
+.offer__list-item img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  width: 107px;
+  transform: rotate(25deg) translate(18%, -2%);
+}
+
+/* CARD ARTISTA */
+
+.artist {
+  --column-count: 5;
+  --grid-gap: 24px;
+  --min-container-width: 372px;
+}
+
+.hidden {
+  display: none;
+}
+
+.grid-container {
+  grid-gap: var(--grid-gap);
+  display: grid;
+  grid-template-columns: repeat(var(--column-count), minmax(0, 1fr));
+  min-width: var(--min-container-width);
+}
+
+.artist-card {
+  background: #181818;
+  border-radius: 8px;
+  -ms-flex: 1;
+  flex: 1;
+  isolation: isolate;
+  padding: 16px;
+  position: relative;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.artist-card:hover {
+  background-color: #252525;
+}
+
+.card-img {
+  padding-bottom: 100%;
+  position: relative;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.artist-img {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-height: 62px;
+}
+
+.card-text a {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.artist-name {
+  box-sizing: border-box;
+  margin-block: 0px;
+  font-size: 16px;
+  font-weight: 700;
+  padding-block-end: 8px;
+}
+
+.artist-categorie {
+  color: #6a6a6a;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.play {
+  position: relative;
+}
+
+.play .fa-play {
+  position: absolute;
+  right: 10px;
+  top: 120px;
+  padding: 18px;
+  background-color: #1db954;
+  border-radius: 100%;
+  font-size: 14px;
+  opacity: 0;
+  transition: all ease 0.4s;
+}
+
+.artist-card:hover .play .fa-play {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+.play .fa-play:hover {
+  padding: 20px;
+  cursor: pointer;
+}
+
+#result-artist {
+  padding: 20px 40px;
+}
+/* FIM CARD ARTISTA */
